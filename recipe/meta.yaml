@@ -1,4 +1,4 @@
-{% set version = '0.4.7.2' %}
+{% set version = "0.4.7.4" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/highlight_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/highlight/highlight_{{ version }}.tar.gz
-  sha256: 20581d440dabd3bfd18872aa2d4b87d1dd071a8359f8c44cc3c3af47df548175
+  sha256: fe599d097e1d950f55e610a20c2fc8746a7e6cff6505f07d7dcfbf7dc15ead2d
 
 build:
   merge_build_host: True  # [win]
-  number: 1002
+  number: 0
 
   rpaths:
     - lib/R/lib/
@@ -58,9 +58,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
